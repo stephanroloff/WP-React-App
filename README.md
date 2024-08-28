@@ -2,7 +2,7 @@
 
 ## Steps<br><br>
 
-### 1. Clone<br>
+### 1. Clone in wp-content/themes/<br>
 
 ```bash
 git clone https://github.com/stephanroloff/wp-react-app.git
