@@ -1,5 +1,7 @@
 # WP REACT APP
 
+This is a Wordpress Theme
+
 ## Steps<br><br>
 
 ### 1. Clone in wp-content/themes/<br>
