@@ -1,65 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import reactLogo from './assets/img/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+import './assets/css/main.css'
 // import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
-import { HashRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
+import Navbar from './Components/Navbar';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-            <li>
-              <a href="/sample-page">Sample</a>
-            </li>
-          </ul>
-        </nav>
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </div>
-    </Router>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+      <Router>
+        <div className='main'>
+          <Navbar/>
+          <div className='flex justify-center py-10'>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </div>
+        </div>
+      </Router>
+      <div className='flex justify-center gap-2'>
+        <a href="https://vitejs.dev" target="_blank" className="logo w-full max-w-[245px]">
+          <img src={viteLogo} className="logo w-full" alt="Vite logo" />
         </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+        <a href="https://react.dev" target="_blank"className="logo w-full max-w-[245px] animate-spin-react">
+          <img src={reactLogo} className="logo react w-full" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1 className='text-center py-6 text-[42px]'>Vite + React</h1>
     </>
   )
 }

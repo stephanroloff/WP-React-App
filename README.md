@@ -34,7 +34,7 @@ and for production:<br>
 npm run build
 ```
 
-### 5. That's all!<br>
+### 5. That's all!<br><br><br>
 
 ## Routing<br><br>
 
