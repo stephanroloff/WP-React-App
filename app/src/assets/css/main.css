@@ -1,20 +1,22 @@
-:root{
+:root {
     background-color: #242424;
     color: aliceblue;
     font-size: 24px;
-    & li{
-        font-size: 16px;
-    }
 }
 
-.animate-spin-react{
+li {
+    font-size: 16px;
+}
+
+.animate-spin-react {
     animation: spin 55s linear infinite;
-    @keyframes spin {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(360deg);
-        }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }
