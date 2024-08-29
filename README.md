@@ -35,3 +35,43 @@ npm run build
 ```
 
 ### 5. That's all!<br>
+
+## Routing<br><br>
+
+There are 2 Options of Routing:
+
+### Option 1 Wordpress Routing (Default):
+
+Here you just have to add the shortcode in the Homepage
+
+```bash
+[react_app]
+```
+
+### Option 2 React Routing (Default):
+
+1. Delete the 404.php Page
+2. Go to index.php and comment or delete the line:
+
+```bash
+echo do_shortcode('[auth_wp_routing]');
+```
+
+and uncomment the line:
+
+```bash
+echo do_shortcode('[react_app]');
+```
+
+3. Go to App.tsx
+   comment or delete the line:
+
+```bash
+import { HashRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
+```
+
+and uncomment the line:
+
+```bash
+import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
+```
