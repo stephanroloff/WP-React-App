@@ -33,7 +33,7 @@ function App() {
           <img src={reactLogo} className="logo react w-full" alt="React logo" />
         </a>
       </div>
-      <h1 className='text-center py-6 text-[42px]'>Vite + React</h1>
+      <h1 className='text-center py-6 text-[42px] not-bg-[#ff6600]'>Vite + React</h1>
     </>
   )
 }
