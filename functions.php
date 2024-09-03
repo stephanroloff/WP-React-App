@@ -12,6 +12,7 @@ function add_security_headers() {
 add_action('send_headers', 'add_security_headers');
 
 //Shortcode to use the React Routing
+//It can to be used with BrowserRoute or HashRoute
 function custom_auth_shortcode_react() {
 
     if ( !is_user_logged_in() ) {
@@ -31,6 +32,7 @@ function custom_auth_shortcode_react() {
 add_shortcode('react_app', 'custom_auth_shortcode_react');
 
 //Shortcode to use the WP Routing
+//It has to be used just with HashRoute
 function custom_auth_shortcode_wp() {
     if ( !is_user_logged_in() ) {
         wp_safe_redirect( wp_login_url() );
@@ -44,4 +46,3 @@ function custom_auth_shortcode_wp() {
     }
 }
 add_shortcode('auth_wp_routing', 'custom_auth_shortcode_wp');
-
