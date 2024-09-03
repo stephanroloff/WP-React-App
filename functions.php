@@ -46,3 +46,15 @@ function custom_auth_shortcode_wp() {
     }
 }
 add_shortcode('auth_wp_routing', 'custom_auth_shortcode_wp');
+
+//Enqueue Styles
+function my_theme_enqueue_styles() {
+    wp_enqueue_style(
+        'my-style-handle',  // Handle for the stylesheet
+        get_template_directory_uri() . '/css/sample-page.css',  // Path to the stylesheet
+        array(),  // Dependencies (leave empty if none)
+        '1.0.0',  // Version number (optional)
+        'all'  // Media type (optional, e.g., 'all', 'screen', 'print')
+    );
+}
+add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
