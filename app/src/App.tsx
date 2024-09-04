@@ -15,7 +15,7 @@ function App() {
       <Router>
         <div className='main'>
           <Navbar/>
-          <div className='flex justify-center py-10'>
+          <div className='flex items-center flex-col py-10'>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
