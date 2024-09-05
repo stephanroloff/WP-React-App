@@ -4,16 +4,16 @@ function Navbar() {
     return (
     <nav className='flex px-8 py-4'>
         <ul className='flex gap-[50px]'>
-            <li>
+            <li className="blackWhiteText">
                 <Link to="/">Home</Link>
             </li>
-            <li>
+            <li className="blackWhiteText">
                 <Link to="/about">About</Link>
             </li>
-            <li>
+            <li className="blackWhiteText">
                 <Link to="/contact">Contact</Link>
             </li>
-            <li>
+            <li className="blackWhiteText">
                 <a href="/sample-page">Sample</a>
             </li>
         </ul>

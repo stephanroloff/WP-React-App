@@ -4,27 +4,23 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "class",
   theme: {
-    // colors: {
-    //   'blue': '#1fb6ff',
-    //   'purple': '#7e5bef',
-    //   'pink': '#ff49db',
-    //   'orange': '#ff7849',
-    //   'green': '#13ce66',
-    //   'yellow': '#ffc82c',
-    //   'gray-dark': '#273444',
-    //   'gray': '#8492a6',
-    //   'gray-light': '#d3dce6',
-    // },
-    // fontFamily: {
-    //   sans: ['Graphik', 'sans-serif'],
-    //   serif: ['Merriweather', 'serif'],
-    // },
     extend: {
       gridTemplateColumns: {
         'autofit-300': 'repeat(auto-fit, minmax(300px, 1fr))',
         'autofill-300': 'repeat(auto-fill, minmax(300px, 1fr))',
-      }
+      },
+      colors: {
+        'customBlack': '#242424',
+      },
+      boxShadow: {
+        'custom': '0 4px 26px rgba(0, 0, 0, 0.6), 0 2px 4px rgba(0, 0, 0, 0.6)',
+      },
+    // fontFamily: {
+    //   sans: ['Graphik', 'sans-serif'],
+    //   serif: ['Merriweather', 'serif'],
+    // },
     },
     screens: {
       'sm': '640px',

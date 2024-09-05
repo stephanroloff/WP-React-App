@@ -1,6 +1,4 @@
 :root {
-    background-color: #242424;
-    color: aliceblue;
     font-size: 24px;
 }
 
@@ -19,4 +17,11 @@ li {
     to {
         transform: rotate(360deg);
     }
+}
+
+.blackWhiteText{
+    @apply text-customBlack dark:text-white transition-all duration-500 ease-in-out;
+}
+.blackWhiteBg{
+    @apply bg-white dark:bg-customBlack transition-all duration-500 ease-in-out;
 }

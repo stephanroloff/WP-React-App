@@ -7,11 +7,24 @@ import Home from './Pages/Home';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
 import Navbar from './Components/Navbar';
+import { useState, useEffect } from 'react';
+
+
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    setIsDarkMode(document.body.classList.contains('dark'));
+  }, []);
+
+  const toggleDarkMode = () => {
+    document.body.classList.toggle('dark');
+    setIsDarkMode(!isDarkMode);
+  };
 
   return (
-    <>
+    <div className='blackWhiteBg h-screen'>
       <Router>
         <div className='main'>
           <Navbar/>
@@ -33,8 +46,17 @@ function App() {
           <img src={reactLogo} className="logo react w-full" alt="React logo" />
         </a>
       </div>
-      <h1 className='text-center py-6 text-[42px] not-bg-[#ff6600]'>Vite + React</h1>
-    </>
+      <h1 className='text-center py-6 text-[42px] customBlack dark:text-white blackWhiteText'>Vite + React</h1>
+      <div className="flex justify-center">
+  <button
+    className="w-40 h-10 rounded-full bg-customBlack dark:bg-white text-white dark:text-customBlack shadow-xl dark:shadow-custom transition-all duration-500 ease-in-out"
+    onClick={toggleDarkMode}
+  >
+   {isDarkMode ? 'Apply Light Mode' : 'Apply Dark Mode'}
+  </button>
+</div>
+
+    </div>
   )
 }
 
